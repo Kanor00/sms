@@ -15,7 +15,7 @@ with open("sms.py", "r", encoding="utf-8") as f:
 if read == r:
   pass
 else:
-  print(Fore.RED + "Güncelleme yapılıyor...")
+  print(Fore.RED + "Updating ASAP...")
   with open("sms.py", "w", encoding="utf-8") as f:
     f.write(r)
 
@@ -32,21 +32,21 @@ for attribute in dir(SendSms):
 while True:
   system("cls||clear")
   print("""{}
- YILDIRIM SMS BOMBER!!       
+ Halal SMSBomber  ( ͡° ͜ʖ ͡°)
 
     Sms: {}                                      
     """.format(Fore.LIGHTRED_EX, len(servisler_sms), Style.RESET_ALL,
                Fore.CYAN))
   print(Fore.LIGHTGREEN_EX + "{/} " + Style.RESET_ALL + "Made by " +
-        Fore.LIGHTGREEN_EX + Style.BRIGHT + "yıldırımlord\n" + Style.RESET_ALL)
+        Fore.LIGHTGREEN_EX + Style.BRIGHT + "KANOR SİKER\n" + Style.RESET_ALL)
   try:
     menu = int(
       input(Fore.LIGHTMAGENTA_EX +
-            " 1- SMS Gönder\n 2- İletişim\n 3- Çıkış\n\n" +
+            " 1- Send SMS \n 2- Top Secret\n 3- Exit\n\n" +
             Fore.LIGHTYELLOW_EX + " Seçim: "))
   except ValueError:
     system("cls||clear")
-    print(Fore.LIGHTRED_EX + "Hatalı giriş yaptınız. Tekrar deneyiniz.")
+    print(Fore.LIGHTRED_EX + "Hatalı giriş yaptın. yarak kafa.")
     sleep(3)
     continue
 
@@ -55,7 +55,7 @@ while True:
     try:
       print(
         Fore.LIGHTYELLOW_EX +
-        "Telefon numarasını başında '+90' olmadan yazınız (birden çoksa 'enter' bas): "
+        "Phone Number (if more than 'one' press ENTER): "
         + Fore.LIGHTGREEN_EX,
         end="")
       tel_no = input()
@@ -69,11 +69,11 @@ while True:
         print(
           Fore.LIGHTGREEN_EX + "[+] " + Fore.CYAN + "TXT dosya formatı:\n" +
           Fore.LIGHTGREEN_EX + "[+] " + Fore.CYAN +
-          "En fazla 5 numara olacak şekilde başında '+90' olmadan alt alta numaraları yazın."
+          "Max 5 alt alta."
         )
         print("")
         print("")
-        print(Fore.LIGHTYELLOW_EX + "TXT dosyasının yolunu giriniz: " +
+        print(Fore.LIGHTYELLOW_EX + "TXT dosyasının adresini/yolunu gir canım: " +
               Fore.LIGHTGREEN_EX,
               end="")
         dosya_yolu = input()
@@ -105,13 +105,13 @@ while True:
                   tel_no5 = "bos"
         except FileNotFoundError:
           system("cls||clear")
-          print(Fore.LIGHTRED_EX + "Dosya bulunamadı. Tekrar deneyiniz.")
+          print(Fore.LIGHTRED_EX + "Dosya bulunamadı. yarak kafa.")
           sleep(3)
           continue
         except ValueError:
           system("cls||clear")
           print(Fore.LIGHTRED_EX +
-                "Hatalı telefon numarası. Tekrar deneyiniz.")
+                "Hatalı telefon numarası, yarak kafa.")
           sleep(3)
           continue
       else:
@@ -119,13 +119,13 @@ while True:
           raise ValueError
     except ValueError:
       system("cls||clear")
-      print(Fore.LIGHTRED_EX + "Hatalı telefon numarası. Tekrar deneyiniz.")
+      print(Fore.LIGHTRED_EX + "Hatalı telefon numarası. yarak kafa.")
       sleep(3)
       continue
     system("cls||clear")
     try:
       print(Fore.LIGHTYELLOW_EX +
-            "Mail adresi (Bilmiyorsanız 'enter' tuşuna basın): " +
+            "Mail address (If you dont know press 'ENTER'): " +
             Fore.LIGHTGREEN_EX,
             end="")
       mail = input()
@@ -133,7 +133,7 @@ while True:
         raise
     except:
       system("cls||clear")
-      print(Fore.LIGHTRED_EX + "Hatalı mail adresi. Tekrar deneyiniz.")
+      print(Fore.LIGHTRED_EX + "Hatalı mail adresi. yarak kafa.")
       sleep(3)
       continue
     system("cls||clear")
@@ -141,7 +141,7 @@ while True:
       print(Fore.LIGHTGREEN_EX + "[+] " + Fore.CYAN +
             "Birden çok numara varsa her bir numara için.")
       print(Fore.LIGHTYELLOW_EX +
-            "Kaç adet SMS göndermek istiyorsun (sonsuz ise 'enter' bas): " +
+            "How many SMS's do you want to send (if ∞ write 0): " +
             Fore.LIGHTGREEN_EX,
             end="")
       kere = input()
@@ -151,19 +151,19 @@ while True:
         kere = None
     except ValueError:
       system("cls||clear")
-      print(Fore.LIGHTRED_EX + "Hatalı giriş yaptınız. Tekrar deneyiniz.")
+      print(Fore.LIGHTRED_EX + "Hatalı giriş yaptın. yarak kafa.")
       sleep(3)
       continue
 
     system("cls||clear")
     try:
       print(Fore.LIGHTYELLOW_EX +
-            "Kaç saniye aralıkla göndermek istiyorsun: " + Fore.LIGHTGREEN_EX,
+            "The time between SMS's: " + Fore.LIGHTGREEN_EX,
             end="")
       aralik = int(input())
     except ValueError:
       system("cls||clear")
-      print(Fore.LIGHTRED_EX + "Hatalı giriş yaptınız. Tekrar deneyiniz.")
+      print(Fore.LIGHTRED_EX + "Hatalı giriş yaptın. yarak kafa.")
       sleep(3)
       continue
     system("cls||clear")
@@ -182,7 +182,7 @@ while True:
                 break
               exec("sms." + attribute + "()")
               sleep(aralik)
-      print(Fore.LIGHTRED_EX + "\nMenüye dönmek için 'enter' tuşuna basınız..")
+      print(Fore.LIGHTRED_EX + "\nTo go back to the menu press 'ENTER' ")
       input()
     elif kere is None:
       while True:
@@ -197,15 +197,15 @@ while True:
     system("cls||clear")
     print(Fore.LIGHTYELLOW_EX + "İletişim bilgileri:\n\n" +
           Fore.LIGHTGREEN_EX +
-          "Discord: yıldırımlord#4444 | https://discord.gg/m7wAfPgeNx\n" +
-          Fore.LIGHTGREEN_EX + "Telegram: https://t.me/krallikbuy\n")
+          "cennet | şeytanın götünde\n" +
+          Fore.LIGHTGREEN_EX + "sikimin başı\n")
 
     print(Fore.LIGHTGREEN_EX + "{/} " + Style.RESET_ALL + "Made by " +
-          Fore.LIGHTMAGENTA_EX + Style.BRIGHT + "yıldırımlord\n" +
+          Fore.LIGHTMAGENTA_EX + Style.BRIGHT + "KANOR SİKER\n" +
           Style.RESET_ALL)
-    print(Fore.LIGHTRED_EX + "Menüye dönmek için 'enter' tuşuna basınız..")
+    print(Fore.LIGHTRED_EX + "To go back to the menu write 'ENTER' ")
     input()
   elif menu == 3:
     system("cls||clear")
-    print(Fore.LIGHTRED_EX + "Çıkış yapılıyor...")
+    print(Fore.LIGHTRED_EX + "Exiting...")
     break
